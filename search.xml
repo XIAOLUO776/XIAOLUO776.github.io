@@ -1,57 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo Template</title>
-    <url>/hello-template/</url>
-    <content><![CDATA[<blockquote>
-<p>A fast, simple &amp; powerful blog framework, powered by <a href="https://nodejs.org/">Node.js</a>. Here is the template of it.</p>
-</blockquote>
-<p><a href="https://mmdjiji.github.io/hexo-template">Demo</a> | <a href="https://hexo.io/">Official Website</a> | <a href="https://hexo.io/docs/">Documentation</a> | <a href="https://github.com/mmdjiji/hexo-template">GitHub</a></p>
-<h2 id="CI-CD"><a href="#CI-CD" class="headerlink" title="CI&#x2F;CD"></a>CI&#x2F;CD</h2><p>This repository uses GitHub Actions for CI&#x2F;CD. You don’t need to build your documents manually. Just commit your documents (then run <code>git push</code>), and then turn on the GitHub Pages in the settings to access your online documents. (For this demo is <a href="https://mmdjiji.github.io/hexo-template">https://mmdjiji.github.io/hexo-template</a>)</p>
-<h2 id="Attention"><a href="#Attention" class="headerlink" title="!!! Attention !!!"></a>!!! Attention !!!</h2><p>There are two lines to modify in <code>_config.yml</code>:</p>
-<ol>
-<li><p>(At line 16) Set your site url here. For example, if you use GitHub Page, set url as <code>https://username.github.io/project</code>:</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://jiji.pro/hexo-template</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>(At line 107) Set your project name here, if your project name is <code>username</code> or <code>username.github.io</code>, just remove it at the end of <code>_config.yml</code>:</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">root:</span> <span class="string">/hexo-template</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<p><strong>If you would not like to do so, it cannot work correctly.</strong></p>
-<h2 id="Hexo-Features"><a href="#Hexo-Features" class="headerlink" title="Hexo Features"></a>Hexo Features</h2><ul>
-<li>Blazing fast generating</li>
-<li>Support for GitHub Flavored Markdown and most Octopress plugins</li>
-<li>One-command deploy to GitHub Pages, Heroku, etc.</li>
-<li>Powerful API for limitless extensibility</li>
-<li>Hundreds of <a href="https://hexo.io/themes/">themes</a> &amp; <a href="https://hexo.io/plugins/">plugins</a></li>
-</ul>
-<h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><p><strong>Install Hexo</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+    <title>图片</title>
+    <url>/1/</url>
+    <content><![CDATA[<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  pie
+    title Key elements in Product X
+    &quot;Calcium&quot; : 42.96
+    &quot;Potassium&quot; : 50.05
+    &quot;Magnesium&quot; : 10.01
+    &quot;Iron&quot; :  5
+  </pre></div>
 
-<p>Install with <a href="https://brew.sh/">brew</a> on macOS and Linux:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ brew install hexo</span><br></pre></td></tr></table></figure>
 
-<p><strong>Setup your blog</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
+<div class="timeline red"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>2022</p>
+</div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>01-02</p>
+</div></div><div class='timeline-item-content'><p>這是測試頁面</p>
+</div></div></div>
 
-<p><strong>Start the server</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="test4"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test4-1">第一個Tab</button></li><li class="tab"><button type="button" data-href="#test4-2"><i class="fab fa-apple-pay" style="text-align: center;"></i></button></li><li class="tab"><button type="button" data-href="#test4-3"><i class="fas fa-bomb"></i>炸彈</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test4-1"><p><strong>tab名字為第一個Tab</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-2"><p><strong>只有圖標 沒有Tab名字</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-3"><p><strong>名字+icon</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
 
-<p><strong>Create a new post</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;Hello Hexo&quot;</span></span><br></pre></td></tr></table></figure>
+<div class="note modern"><p>默認 提示塊標籤</p>
+</div>
 
-<p><strong>Generate static files</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<div class="note default modern"><p>default 提示塊標籤</p>
+</div>
 
-<h2 id="More-Information"><a href="#More-Information" class="headerlink" title="More Information"></a>More Information</h2><ul>
-<li>Read the <a href="https://hexo.io/">documentation</a></li>
-<li>Visit the <a href="https://github.com/hexojs/awesome-hexo">Awesome Hexo</a> list</li>
-<li>Find solutions in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a></li>
-<li>Join discussion on <a href="https://groups.google.com/group/hexo">Google Group</a>, <a href="https://discord.gg/teM2Anj">Discord</a>, <a href="https://gitter.im/hexojs/hexo">Gitter</a> or <a href="https://t.me/hexojs">Telegram</a></li>
-<li>See the <a href="https://hexo.io/plugins/">plugin list</a> and the <a href="https://hexo.io/themes/">theme list</a> on wiki</li>
-<li>Follow <a href="https://twitter.com/hexojs">@hexojs</a> for latest news</li>
-</ul>
-<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Follows <a href="https://github.com/hexojs/hexo">hexojs&#x2F;hexo</a> , use <a href="LICENSE">MIT License</a>.</p>
-<p><a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fhexojs%2Fhexo?ref=badge_large"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhexojs%2Fhexo.svg?type=large" alt="FOSSA Status"></a></p>
+<div class="note primary modern"><p>primary 提示塊標籤</p>
+</div>
+
+<div class="note success modern"><p>success 提示塊標籤</p>
+</div>
+
+<div class="note info modern"><p>info 提示塊標籤</p>
+</div>
+
+<div class="note warning modern"><p>warning 提示塊標籤</p>
+</div>
+
+<div class="note danger modern"><p>danger 提示塊標籤</p>
+</div>
+
 ]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+      </tags>
   </entry>
 </search>
