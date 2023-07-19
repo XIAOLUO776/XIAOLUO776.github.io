@@ -145,8 +145,21 @@ head=temp;
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>c语言</tag>
+        <tag>c代码</tag>
         <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言头文件limits.h和float.h中常用明示常量的值</title>
+    <url>/6/</url>
+    <content><![CDATA[<h1 id="limits-h"><a href="#limits-h" class="headerlink" title="limits.h"></a>limits.h</h1><p>CHAR_BIT：8<br>SCHAR_MIN：-128<br>SCHAR_MAX：127<br>UCHAR_MAX：255<br>CHAR_MIN：-128<br>CHAR_MAX：127<br>MB_LEN_MAX：16<br>SHRT_MIN：-32768<br>SHRT_MAX：32767<br>USHRT_MAX：65535<br>INT_MIN：-2147483648<br>INT_MAX：2147483647<br>UINT_MAX：4294967295<br>LONG_MIN：-9223372036854775808<br>LONG_MAX：9223372036854775807<br>ULONG_MAX：18446744073709551615<br>LLONG_MIN：-9223372036854775808<br>LLONG_MAX：9223372036854775807<br>ULLONG_MAX：18446744073709551615</p>
+<h1 id="float-h"><a href="#float-h" class="headerlink" title="float.h"></a>float.h</h1><p>FLT_RADIX：2<br>FLT_ROUNDS：1<br>FLT_DIG：6<br>FLT_EPSILON：1.19209290e-07F<br>FLT_MANT_DIG：24<br>FLT_MAX：3.40282347e+38F<br>FLT_MAX_10_EXP：38<br>FLT_MAX_EXP：128<br>FLT_MIN：1.17549435e-38F<br>FLT_MIN_10_EXP：(-37)<br>FLT_MIN_EXP：(-125)<br>DBL_DIG：15<br>DBL_EPSILON：2.2204460492503131e-16<br>DBL_MANT_DIG：53<br>DBL_MAX：1.7976931348623158e+308<br>DBL_MAX_10_EXP：308<br>DBL_MAX_EXP：1024<br>DBL_MIN：2.2250738585072014e-308<br>DBL_MIN_10_EXP：(-307)<br>DBL_MIN_EXP：(-1021)<br>LDBL_DIG：18<br>LDBL_EPSILON：1.0842021724855044e-19L<br>LDBL_MANT_DIG：64<br>LDBL_MAX：1.1897314953572318e+4932L<br>LDBL_MAX_10_EXP：4932<br>LDBL_MAX_EXP：16384<br>LDBL_MIN：3.3621031431120936e-4932L<br>LDBL_MIN_10_EXP：(-4931)<br>LDBL_MIN_EXP：(-16381)</p>
+]]></content>
+      <categories>
+        <category>c语言</category>
+      </categories>
+      <tags>
+        <tag>c知识点</tag>
       </tags>
   </entry>
 </search>
