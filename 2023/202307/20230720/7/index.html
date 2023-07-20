@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>C语言printf与scanf扩展篇 | XIAOLUO的博客</title><meta name="author" content="仙气缭绕街头"><meta name="copyright" content="仙气缭绕街头"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="printfprintf转换说明转换说明	输出%a，%A	浮点数，十六进制数与p记数法（P记数法） %c	单个字符 %d	有符号十进制整数 %e,%E	浮点数，e记数法（E记数法） %f	浮点数，十进制记数法 %g,%G	自动选择%e(%E),%f。%e(%E)格式用于指数小于-4或者大于等于精度时 %i	与%d相同 %o	无符号八进制整数 %p	指针 %s	字符串 %u	无符号十进制整数 %x,">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>C语言printf与scanf扩展篇 | XIAOLUO的博客</title><meta name="author" content="仙气缭绕街头"><meta name="copyright" content="仙气缭绕街头"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="printfprintf转换说明转换说明	输出%a，%A: 浮点数，十六进制数与p记数法（P记数法） %c: 单个字符 %d: 有符号十进制整数 %e,%E: 浮点数，e记数法（E记数法） %f: 浮点数，十进制记数法 %g,%G: 自动选择%e(%E),%f。%e(%E)格式用于指数小于-4或者大于等于精度时 %i: 与%d相同 %o: 无符号八进制整数 %p: 指针 %s: 字符串 %u: 无">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言printf与scanf扩展篇">
 <meta property="og:url" content="https://xiaoluo776.github.io/2023/202307/20230720/7/index.html">
 <meta property="og:site_name" content="XIAOLUO的博客">
-<meta property="og:description" content="printfprintf转换说明转换说明	输出%a，%A	浮点数，十六进制数与p记数法（P记数法） %c	单个字符 %d	有符号十进制整数 %e,%E	浮点数，e记数法（E记数法） %f	浮点数，十进制记数法 %g,%G	自动选择%e(%E),%f。%e(%E)格式用于指数小于-4或者大于等于精度时 %i	与%d相同 %o	无符号八进制整数 %p	指针 %s	字符串 %u	无符号十进制整数 %x,">
+<meta property="og:description" content="printfprintf转换说明转换说明	输出%a，%A: 浮点数，十六进制数与p记数法（P记数法） %c: 单个字符 %d: 有符号十进制整数 %e,%E: 浮点数，e记数法（E记数法） %f: 浮点数，十进制记数法 %g,%G: 自动选择%e(%E),%f。%e(%E)格式用于指数小于-4或者大于等于精度时 %i: 与%d相同 %o: 无符号八进制整数 %p: 指针 %s: 字符串 %u: 无">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
 <meta property="article:published_time" content="2023-07-20T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-20T16:25:04.769Z">
+<meta property="article:modified_time" content="2023-07-20T16:36:03.331Z">
 <meta property="article:author" content="仙气缭绕街头">
 <meta property="article:tag" content="c知识点">
 <meta name="twitter:card" content="summary">
@@ -58,7 +58,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2023-07-20 16:25:04'
+  postUpdate: '2023-07-20 16:36:03'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -183,25 +183,25 @@
     document.addEventListener('pjax:send', () => { preloader.initLoading() })
     document.addEventListener('pjax:complete', () => { preloader.endLoading() })
   }
-})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2023/07/13/UtkhsWXywRiGOF8.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="XIAOLUO的博客"><img class="site-icon" src="https://s2.loli.net/2023/07/13/UtkhsWXywRiGOF8.jpg"/><span class="site-name">XIAOLUO的博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C语言printf与scanf扩展篇</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-20T00:00:00.000Z" title="发表于 2023-07-20 00:00:00">2023-07-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-20T16:25:04.769Z" title="更新于 2023-07-20 16:25:04">2023-07-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/c%E8%AF%AD%E8%A8%80/">c语言</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="printf"><a href="#printf" class="headerlink" title="printf"></a>printf</h1><h2 id="printf转换说明"><a href="#printf转换说明" class="headerlink" title="printf转换说明"></a>printf转换说明</h2><p>转换说明	输出<br>%a，%A	浮点数，十六进制数与p记数法（P记数法）</p>
-<p>%c	单个字符</p>
-<p>%d	有符号十进制整数</p>
-<p>%e,%E	浮点数，e记数法（E记数法）</p>
-<p>%f	浮点数，十进制记数法</p>
-<p>%g,%G	自动选择%e(%E),%f。%e(%E)格式用于指数小于-4或者大于等于精度时</p>
-<p>%i	与%d相同</p>
-<p>%o	无符号八进制整数</p>
-<p>%p	指针</p>
-<p>%s	字符串</p>
-<p>%u	无符号十进制整数</p>
-<p>%x,%X	无符号十六进制整数，适用十六进制数0f（0F）</p>
-<p>%%	打印一个%</p>
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2023/07/13/UtkhsWXywRiGOF8.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="XIAOLUO的博客"><img class="site-icon" src="https://s2.loli.net/2023/07/13/UtkhsWXywRiGOF8.jpg"/><span class="site-name">XIAOLUO的博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C语言printf与scanf扩展篇</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-20T00:00:00.000Z" title="发表于 2023-07-20 00:00:00">2023-07-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-20T16:36:03.331Z" title="更新于 2023-07-20 16:36:03">2023-07-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/c%E8%AF%AD%E8%A8%80/">c语言</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="printf"><a href="#printf" class="headerlink" title="printf"></a>printf</h1><h2 id="printf转换说明"><a href="#printf转换说明" class="headerlink" title="printf转换说明"></a>printf转换说明</h2><p>转换说明	输出<br>%a，%A: 浮点数，十六进制数与p记数法（P记数法）</p>
+<p>%c: 单个字符</p>
+<p>%d: 有符号十进制整数</p>
+<p>%e,%E: 浮点数，e记数法（E记数法）</p>
+<p>%f: 浮点数，十进制记数法</p>
+<p>%g,%G: 自动选择%e(%E),%f。%e(%E)格式用于指数小于-4或者大于等于精度时</p>
+<p>%i: 与%d相同</p>
+<p>%o: 无符号八进制整数</p>
+<p>%p: 指针</p>
+<p>%s: 字符串</p>
+<p>%u: 无符号十进制整数</p>
+<p>%x,%X: 无符号十六进制整数，适用十六进制数0f（0F）</p>
+<p>%%: 打印一个%</p>
 <p>%i和%d的相同之处可以追溯到C语言的历史。最初，%d用于打印有符号十进制整数，而%i用于打印无符号或有符号的十进制整数。然而，从实际应用角度来看，很少需要打印无符号十进制整数。因此，在实践中，%d逐渐成为打印无符号和有符号十进制整数的通用转换说明符，而%i则被视为%d的一个别名。</p>
-<h2 id="printf修饰符"><a href="#printf修饰符" class="headerlink" title="printf修饰符"></a>printf修饰符</h2><p>修饰符	含义<br>标记	共+，-，空格，#，0五种,可以一起使用或者不使用</p>
-<p>数字	最小字段宽度超出的话系统会自动使用更大的宽度</p>
-<p>.数字	精度</p>
-<p>h,hh,j,l,ll,L,t,z	和转换说明一起使用</p>
-<p>&#x2F;*	抑制字符</p>
+<h2 id="printf修饰符"><a href="#printf修饰符" class="headerlink" title="printf修饰符"></a>printf修饰符</h2><p>修饰符	含义<br>标记: 共+，-，空格，#，0五种,可以一起使用或者不使用</p>
+<p>数字: 最小字段宽度超出的话系统会自动使用更大的宽度</p>
+<p>.数字: 精度</p>
+<p>h,hh,j,l,ll,L,t,z: 和转换说明一起使用</p>
+<p>*: 抑制字符</p>
 <h3 id="printf中-用法"><a href="#printf中-用法" class="headerlink" title="printf中*用法"></a>printf中*用法</h3><p>int main ()<br>{<br>    int a,b;<br>    int n&#x3D;256;<br>    double w&#x3D;242.5;<br>    scanf(“%d”,&amp;a);<br>    printf(“n&#x3D;%<em>d\n”,a,n);<br>    scanf(“%d %d”,&amp;a,&amp;b);<br>    printf(“w&#x3D;%</em>.*lf\n”,a,b,w);<br>    return 0;<br>}</p>
 <p>输入</p>
 <p>6&#x2F;&#x2F;意思宽度为6</p>
@@ -211,30 +211,28 @@
 <p>8 3&#x2F;&#x2F;意思宽度为8，保留三位小数</p>
 <p>输出</p>
 <p>w&#x3D;空一格242.500</p>
-<h2 id="printf中的标记"><a href="#printf中的标记" class="headerlink" title="printf中的标记"></a>printf中的标记</h2><p>标记	含义<br>-	左对齐，从左侧开始答应</p>
-<ul>
-<li>   用于有符号值显示符号，例“%+6.2f”</li>
-</ul>
-<p>空格	有符号为正则不显示符号，为负则显示处负号</p>
-<p>&#x2F;#	把结果转换为另一种形式。如%o则以0开始，%x,%X从0x,0X开始,对于所有浮点格式，#保证了即使后面没有任何数字，也打印一个小数点字符。对于%g,%G格式，防止后面的0被删除</p>
-<p>0	对于数值格式，用前导0代替空格填补字段宽度。对于整数格式，如果出现-标记或者指定精度，则忽略该标记</p>
+<h2 id="printf中的标记"><a href="#printf中的标记" class="headerlink" title="printf中的标记"></a>printf中的标记</h2><p>标记	含义<br>-: 左对齐，从左侧开始打印</p>
+<p>+: 用于有符号值显示符号，例“%+6.2f”</p>
+<p>空格: 有符号为正则不显示符号，为负则显示处负号</p>
+<p>#: 把结果转换为另一种形式。如%o则以0开始，%x,%X从0x,0X开始,对于所有浮点格式，#保证了即使后面没有任何数字，也打印一个小数点字符。对于%g,%G格式，防止后面的0被删除</p>
+<p>0: 对于数值格式，用前导0代替空格填补字段宽度。对于整数格式，如果出现-标记或者指定精度，则忽略该标记</p>
 <h2 id="printf多种打印方式"><a href="#printf多种打印方式" class="headerlink" title="printf多种打印方式"></a>printf多种打印方式</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>    printf(“1”);<br>    printf(“23\n”);
    </p>
 <h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>   printf(“1<br>   23\n”);</p>
 <h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>   printf(“1”<br>   “23\n”);</p>
 <h1 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h1><h2 id="scanf的转换说明"><a href="#scanf的转换说明" class="headerlink" title="scanf的转换说明"></a>scanf的转换说明</h2><p>转换说明	含义</p>
-<p>%c	把输入解释成字符</p>
-<p>%d,%i	把输入解释成有符号十进制整数</p>
-<p>%e,%E,%f,%F,%g,%G,%a,%A	把输入解释成浮点数</p>
-<p>%o	把输入解释成有符号八进制整数</p>
-<p>%p	把输入解释成指针</p>
-<p>%s	把输入解释成字符串</p>
-<p>%u	把输入解释成无符号十进制整数</p>
-<p>%X,%x	把输入解释成有符号十六进制整数</p>
-<h2 id="scanf中修饰符"><a href="#scanf中修饰符" class="headerlink" title="scanf中修饰符"></a>scanf中修饰符</h2><p>修饰符	含义<br>*	抑制字符</p>
-<p>数字	最大字段宽度，例如%5s</p>
-<p>hh,ll,h,l,L	类型读取，例如%hd</p>
-<p>z,j,t	j表示intmax_t或者uintmax_t类型,z表示sizeof返回类型,t表示两个指针差值的类型</p>
+<p>%c: 把输入解释成字符</p>
+<p>%d,%i: 把输入解释成有符号十进制整数</p>
+<p>%e,%E,%f,%F,%g,%G,%a,%A: 把输入解释成浮点数</p>
+<p>%o: 把输入解释成有符号八进制整数</p>
+<p>%p: 把输入解释成指针</p>
+<p>%s: 把输入解释成字符串</p>
+<p>%u: 把输入解释成无符号十进制整数</p>
+<p>%X,%x: 把输入解释成有符号十六进制整数</p>
+<h2 id="scanf中修饰符"><a href="#scanf中修饰符" class="headerlink" title="scanf中修饰符"></a>scanf中修饰符</h2><p>修饰符	含义<br>*: 抑制字符</p>
+<p>数字: 最大字段宽度，例如%5s</p>
+<p>hh,ll,h,l,L: 类型读取，例如%hd</p>
+<p>z,j,t: j表示intmax_t或者uintmax_t类型,z表示sizeof返回类型,t表示两个指针差值的类型</p>
 <h2 id="scanf中抑制字符使用"><a href="#scanf中抑制字符使用" class="headerlink" title="scanf中抑制字符使用"></a>scanf中抑制字符使用</h2><p>#include&lt;stdio.h&gt;<br>int main ()<br>{<br>    int n;<br>    scanf(“%*d %*d %d”,&amp;n);<br>    printf(“%d\n”,n);<br>    return 0;<br>}</p>
 <p>输入</p>
 <p>6 7 8</p>
