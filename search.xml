@@ -64,12 +64,13 @@
   <entry>
     <title>常用c语言数据类型与转义序列</title>
     <url>/3/</url>
-    <content><![CDATA[<p>整形<br>1.有符号<br>类型                  对应使用关键字符<br>short                 %hd<br>int                   %d<br>long                  %ld<br>long long             %lld<br>有符号类型前面可以加signed强调是有符号类型，例如：signed int<br>2.无符号<br>类型                  对应使用关键字符<br>unsigned short        %hu<br>unsigned int          %u<br>unsigned long         %lu<br>unsigned long long    %llu</p>
-<p>浮点形<br>类型                   对应使用关键字符<br>flort                  %f<br>double                 %lf<br>long double            %Lf</p>
-<p>字符形<br>类型                   对应使用关键字符<br>char（单个字符）        %c<br>char（字符串）          %s</p>
-<p>转义序列<br>转义序列                含义<br>\a                     警报<br>\b                     退格<br>\f                     换页<br>\n                     换行<br>\r                     回车<br>\t                     水平制表符<br>\v                     垂直制表符<br>\\                     反斜杠<br>\‘                     单引号<br>\“                     双引号<br>\?                     问号<br>\0oo                   八进制值（o表示0到7中的一个数）<br>\xhh                   十六进制数（h表示0到f中的一个数）</p>
-<p>八进制与十六进制<br>用十进制打印               %d<br>用八进制打印               %o<br>用十六进制打印             %x<br>用八进制打印显示进制前缀    %#o (例如十进制100对应八进制0144)<br>用十六进制打印显示进制前缀  %#x,%#X（例如十进制100对应十六进制0x64,0X64）</p>
-<p>数据类型大小<br>用siezof(目标)计算，大小用%zd打印出</p>
+    <content><![CDATA[<h1 id="整形"><a href="#整形" class="headerlink" title="整形"></a>整形</h1><h2 id="1-有符号"><a href="#1-有符号" class="headerlink" title="1.有符号"></a>1.有符号</h2><p>类型                  对应使用关键字符<br>short                 %hd<br>int                   %d<br>long                  %ld<br>long long             %lld<br>有符号类型前面可以加signed强调是有符号类型，例如：signed int</p>
+<h2 id="2-无符号"><a href="#2-无符号" class="headerlink" title="2.无符号"></a>2.无符号</h2><p>类型                  对应使用关键字符<br>unsigned short        %hu<br>unsigned int          %u<br>unsigned long         %lu<br>unsigned long long    %llu</p>
+<h1 id="浮点形"><a href="#浮点形" class="headerlink" title="浮点形"></a>浮点形</h1><p>类型                   对应使用关键字符<br>flort                  %f<br>double                 %lf<br>long double            %Lf</p>
+<h1 id="字符形"><a href="#字符形" class="headerlink" title="字符形"></a>字符形</h1><p>类型                   对应使用关键字符<br>char（单个字符）        %c<br>char（字符串）          %s</p>
+<h1 id="转义序列"><a href="#转义序列" class="headerlink" title="转义序列"></a>转义序列</h1><p>转义序列                含义<br>\a                     警报<br>\b                     退格<br>\f                     换页<br>\n                     换行<br>\r                     回车<br>\t                     水平制表符<br>\v                     垂直制表符<br>\\                     反斜杠<br>\‘                     单引号<br>\“                     双引号<br>\?                     问号<br>\0oo                   八进制值（o表示0到7中的一个数）<br>\xhh                   十六进制数（h表示0到f中的一个数）</p>
+<h1 id="八进制与十六进制"><a href="#八进制与十六进制" class="headerlink" title="八进制与十六进制"></a>八进制与十六进制</h1><p>用十进制打印               %d<br>用八进制打印               %o<br>用十六进制打印             %x<br>用八进制打印显示进制前缀    %#o (例如十进制100对应八进制0144)<br>用十六进制打印显示进制前缀  %#x,%#X（例如十进制100对应十六进制0x64,0X64）</p>
+<h1 id="数据类型大小"><a href="#数据类型大小" class="headerlink" title="数据类型大小"></a>数据类型大小</h1><p>用siezof(目标)计算，大小用%zd打印出</p>
 ]]></content>
       <categories>
         <category>c语言</category>
@@ -154,6 +155,80 @@ head=temp;
     <url>/6/</url>
     <content><![CDATA[<h1 id="limits-h"><a href="#limits-h" class="headerlink" title="limits.h"></a>limits.h</h1><p>CHAR_BIT：8<br>SCHAR_MIN：-128<br>SCHAR_MAX：127<br>UCHAR_MAX：255<br>CHAR_MIN：-128<br>CHAR_MAX：127<br>MB_LEN_MAX：16<br>SHRT_MIN：-32768<br>SHRT_MAX：32767<br>USHRT_MAX：65535<br>INT_MIN：-2147483648<br>INT_MAX：2147483647<br>UINT_MAX：4294967295<br>LONG_MIN：-9223372036854775808<br>LONG_MAX：9223372036854775807<br>ULONG_MAX：18446744073709551615<br>LLONG_MIN：-9223372036854775808<br>LLONG_MAX：9223372036854775807<br>ULLONG_MAX：18446744073709551615</p>
 <h1 id="float-h"><a href="#float-h" class="headerlink" title="float.h"></a>float.h</h1><p>FLT_RADIX：2<br>FLT_ROUNDS：1<br>FLT_DIG：6<br>FLT_EPSILON：1.19209290e-07F<br>FLT_MANT_DIG：24<br>FLT_MAX：3.40282347e+38F<br>FLT_MAX_10_EXP：38<br>FLT_MAX_EXP：128<br>FLT_MIN：1.17549435e-38F<br>FLT_MIN_10_EXP：(-37)<br>FLT_MIN_EXP：(-125)<br>DBL_DIG：15<br>DBL_EPSILON：2.2204460492503131e-16<br>DBL_MANT_DIG：53<br>DBL_MAX：1.7976931348623158e+308<br>DBL_MAX_10_EXP：308<br>DBL_MAX_EXP：1024<br>DBL_MIN：2.2250738585072014e-308<br>DBL_MIN_10_EXP：(-307)<br>DBL_MIN_EXP：(-1021)<br>LDBL_DIG：18<br>LDBL_EPSILON：1.0842021724855044e-19L<br>LDBL_MANT_DIG：64<br>LDBL_MAX：1.1897314953572318e+4932L<br>LDBL_MAX_10_EXP：4932<br>LDBL_MAX_EXP：16384<br>LDBL_MIN：3.3621031431120936e-4932L<br>LDBL_MIN_10_EXP：(-4931)<br>LDBL_MIN_EXP：(-16381)</p>
+]]></content>
+      <categories>
+        <category>c语言</category>
+      </categories>
+      <tags>
+        <tag>c知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言printf与scanf扩展篇</title>
+    <url>/7/</url>
+    <content><![CDATA[<h1 id="printf"><a href="#printf" class="headerlink" title="printf"></a>printf</h1><h2 id="printf转换说明"><a href="#printf转换说明" class="headerlink" title="printf转换说明"></a>printf转换说明</h2><p>转换说明	输出<br>%a，%A	浮点数，十六进制数与p记数法（P记数法）</p>
+<p>%c	单个字符</p>
+<p>%d	有符号十进制整数</p>
+<p>%e,%E	浮点数，e记数法（E记数法）</p>
+<p>%f	浮点数，十进制记数法</p>
+<p>%g,%G	自动选择%e(%E),%f。%e(%E)格式用于指数小于-4或者大于等于精度时</p>
+<p>%i	与%d相同</p>
+<p>%o	无符号八进制整数</p>
+<p>%p	指针</p>
+<p>%s	字符串</p>
+<p>%u	无符号十进制整数</p>
+<p>%x,%X	无符号十六进制整数，适用十六进制数0f（0F）</p>
+<p>%%	打印一个%</p>
+<p>%i和%d的相同之处可以追溯到C语言的历史。最初，%d用于打印有符号十进制整数，而%i用于打印无符号或有符号的十进制整数。然而，从实际应用角度来看，很少需要打印无符号十进制整数。因此，在实践中，%d逐渐成为打印无符号和有符号十进制整数的通用转换说明符，而%i则被视为%d的一个别名。</p>
+<h2 id="printf修饰符"><a href="#printf修饰符" class="headerlink" title="printf修饰符"></a>printf修饰符</h2><p>修饰符	含义<br>标记	共+，-，空格，#，0五种,可以一起使用或者不使用</p>
+<p>数字	最小字段宽度超出的话系统会自动使用更大的宽度</p>
+<p>.数字	精度</p>
+<p>h,hh,j,l,ll,L,t,z	和转换说明一起使用</p>
+<p>&#x2F;*	抑制字符</p>
+<h3 id="printf中-用法"><a href="#printf中-用法" class="headerlink" title="printf中*用法"></a>printf中*用法</h3><p>int main ()<br>{<br>    int a,b;<br>    int n&#x3D;256;<br>    double w&#x3D;242.5;<br>    scanf(“%d”,&amp;a);<br>    printf(“n&#x3D;%<em>d\n”,a,n);<br>    scanf(“%d %d”,&amp;a,&amp;b);<br>    printf(“w&#x3D;%</em>.*lf\n”,a,b,w);<br>    return 0;<br>}</p>
+<p>输入</p>
+<p>6&#x2F;&#x2F;意思宽度为6</p>
+<p>输出</p>
+<p>n&#x3D;空3格256</p>
+<p>输入</p>
+<p>8 3&#x2F;&#x2F;意思宽度为8，保留三位小数</p>
+<p>输出</p>
+<p>w&#x3D;空一格242.500</p>
+<h2 id="printf中的标记"><a href="#printf中的标记" class="headerlink" title="printf中的标记"></a>printf中的标记</h2><p>标记	含义<br>-	左对齐，从左侧开始答应</p>
+<ul>
+<li>   用于有符号值显示符号，例“%+6.2f”</li>
+</ul>
+<p>空格	有符号为正则不显示符号，为负则显示处负号</p>
+<p>&#x2F;#	把结果转换为另一种形式。如%o则以0开始，%x,%X从0x,0X开始,对于所有浮点格式，#保证了即使后面没有任何数字，也打印一个小数点字符。对于%g,%G格式，防止后面的0被删除</p>
+<p>0	对于数值格式，用前导0代替空格填补字段宽度。对于整数格式，如果出现-标记或者指定精度，则忽略该标记</p>
+<h2 id="printf多种打印方式"><a href="#printf多种打印方式" class="headerlink" title="printf多种打印方式"></a>printf多种打印方式</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>    printf(“1”);<br>    printf(“23\n”);
+   </p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>   printf(“1<br>   23\n”);</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>   printf(“1”<br>   “23\n”);</p>
+<h1 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h1><h2 id="scanf的转换说明"><a href="#scanf的转换说明" class="headerlink" title="scanf的转换说明"></a>scanf的转换说明</h2><p>转换说明	含义</p>
+<p>%c	把输入解释成字符</p>
+<p>%d,%i	把输入解释成有符号十进制整数</p>
+<p>%e,%E,%f,%F,%g,%G,%a,%A	把输入解释成浮点数</p>
+<p>%o	把输入解释成有符号八进制整数</p>
+<p>%p	把输入解释成指针</p>
+<p>%s	把输入解释成字符串</p>
+<p>%u	把输入解释成无符号十进制整数</p>
+<p>%X,%x	把输入解释成有符号十六进制整数</p>
+<h2 id="scanf中修饰符"><a href="#scanf中修饰符" class="headerlink" title="scanf中修饰符"></a>scanf中修饰符</h2><p>修饰符	含义<br>*	抑制字符</p>
+<p>数字	最大字段宽度，例如%5s</p>
+<p>hh,ll,h,l,L	类型读取，例如%hd</p>
+<p>z,j,t	j表示intmax_t或者uintmax_t类型,z表示sizeof返回类型,t表示两个指针差值的类型</p>
+<h2 id="scanf中抑制字符使用"><a href="#scanf中抑制字符使用" class="headerlink" title="scanf中抑制字符使用"></a>scanf中抑制字符使用</h2><p>#include&lt;stdio.h&gt;<br>int main ()<br>{<br>    int n;<br>    scanf(“%*d %*d %d”,&amp;n);<br>    printf(“%d\n”,n);<br>    return 0;<br>}</p>
+<p>输入</p>
+<p>6 7 8</p>
+<p>输出</p>
+<p>8</p>
+<h2 id="常用scanf输入扩展"><a href="#常用scanf输入扩展" class="headerlink" title="常用scanf输入扩展"></a>常用scanf输入扩展</h2><h3 id="1-接受空格"><a href="#1-接受空格" class="headerlink" title="1.接受空格"></a>1.接受空格</h3><p>    char ch[100];<br>    scanf(“%[^\n]”,ch);<br>    puts(ch);</p>
+<h3 id="2-scanf输入格式要对应"><a href="#2-scanf输入格式要对应" class="headerlink" title="2.scanf输入格式要对应"></a>2.scanf输入格式要对应</h3><p>    int a,b,c;<br>    scanf(“%d %d %d”,&amp;a,&amp;b,&amp;c);</p>
+<h3 id="3-限定宽度"><a href="#3-限定宽度" class="headerlink" title="3.限定宽度"></a>3.限定宽度</h3><p>   int a,b,c;<br>   scanf(“%4d%4d%4d”,&amp;a,&amp;b,&amp;c);<br>   printf(“%d %d %d\n”,a,b,c);</p>
+<h3 id="4-屏蔽数据类型"><a href="#4-屏蔽数据类型" class="headerlink" title="4.屏蔽数据类型"></a>4.屏蔽数据类型</h3><p>%*d屏蔽数字，%*c屏蔽字符 <br>    char arr[100]; <br>   scanf(“%*d%s”,arr);&#x2F;&#x2F;先输数字再输字符 <br>   printf(“%s”,arr);</p>
+<h3 id="5-精确屏蔽"><a href="#5-精确屏蔽" class="headerlink" title="5.精确屏蔽"></a>5.精确屏蔽</h3><p>    char ch[100];<br>    scanf(“%[1-9]”,ch);&#x2F;&#x2F;先输数字1-9再输其他，屏蔽其他<br>    scanf(“%[^1-9]”,ch);&#x2F;&#x2F;先输其他再输数字，屏蔽数字1-9<br>    puts(ch);</p>
+<h3 id="6-屏蔽一个区间内的"><a href="#6-屏蔽一个区间内的" class="headerlink" title="6.屏蔽一个区间内的"></a>6.屏蔽一个区间内的</h3><p>    char ch;<br>    scanf(“%*[a-zA-Z]%s”,ch);&#x2F;&#x2F;先输字母再输其他，屏蔽前面的字母<br>    puts(ch);<br>    printf(“%c\n”,ch);</p>
 ]]></content>
       <categories>
         <category>c语言</category>
