@@ -1,0 +1,70 @@
+---
+title: 排序算法：简单选择，插入，冒泡
+tags: 
+	- c代码
+categories: 
+	- 排序算法
+date: 2023-07-12	
+---
+
+# 简单选择排序
+void SelectSort(int arr[], int size)
+{
+    int i, j;
+    for (i = 0; i < size-1; i++)
+    {
+        int index = i;
+        for(j = i+1; j < size; j++)
+        {
+            if(arr[index] > arr[j])
+            {
+                index = j;
+            }
+        }
+        int temp = arr[i];
+        arr[i] = arr[index];    
+        arr[index] = temp;
+    }
+}
+
+# 插入排序
+void InsertSort(int arr[], int size)
+{
+    int i, j;
+    for(i = 1; i < size; i++)
+    {
+        int temp = arr[i]; 
+        j=i-1;
+        while (j >= 0 && arr[j] > temp)
+        {
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = temp;
+    }
+}
+
+# 冒泡排序
+void bubbleSort(int arr[], int size)
+{
+    for(int i = 0; i < size-1; i++)
+    {
+        bool off = false;
+        for(int j = 0; j < size-1-i; j++)
+        {
+            if(arr[j] > arr[j+1])
+            {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                off = true;
+             }
+        }
+        printf("第%d次执行\n",i+1);
+        printArr(arr, 8);
+        if(!off)
+         {
+             return;
+        }
+    }
+}
