@@ -243,10 +243,25 @@ head=temp;
 <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p>void bubbleSort(int arr[], int size)<br>{<br>    for(int i &#x3D; 0; i &lt; size-1; i++)<br>    {<br>        bool off &#x3D; false;<br>        for(int j &#x3D; 0; j &lt; size-1-i; j++)<br>        {<br>            if(arr[j] &gt; arr[j+1])<br>            {<br>                int temp &#x3D; arr[j];<br>                arr[j] &#x3D; arr[j+1];<br>                arr[j+1] &#x3D; temp;<br>                off &#x3D; true;<br>             }<br>        }<br>        printf(“第%d次执行\n”,i+1);<br>        printArr(arr, 8);<br>        if(!off)<br>         {<br>             return;<br>        }<br>    }<br>}</p>
 ]]></content>
       <categories>
-        <category>排序算法</category>
+        <category>算法</category>
       </categories>
       <tags>
         <tag>c代码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二分发</title>
+    <url>/2023/202309/20230924/2/</url>
+    <content><![CDATA[<h1 id="java实现"><a href="#java实现" class="headerlink" title="java实现"></a>java实现</h1><p>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
+<h6 id="right-nums-length；"><a href="#right-nums-length；" class="headerlink" title="right &#x3D; nums.length；"></a>right &#x3D; nums.length；</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int search(int[] nums, int target) &#123;</span><br><span class="line">        int left = 0, right = nums.length;</span><br><span class="line">        while (left &lt; right) &#123;</span><br><span class="line">            int mid = left + ((right-left) &gt;&gt; 1);</span><br><span class="line">            if (nums[mid] == target) &#123;</span><br><span class="line">                return mid;</span><br><span class="line">            &#125; else if (nums[mid] &gt; target) &#123;</span><br><span class="line">                right = mid;</span><br><span class="line">            &#125; else if (nums[mid] &lt; target) &#123;</span><br><span class="line">                left = mid + 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return -1;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="right-nums-length-1；"><a href="#right-nums-length-1；" class="headerlink" title="right &#x3D; nums.length - 1；"></a>right &#x3D; nums.length - 1；</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int search(int[] nums, int target) &#123;</span><br><span class="line">        int left = 0;</span><br><span class="line">        int right = nums.length - 1;</span><br><span class="line">        while (left &lt;= right) &#123;</span><br><span class="line">            int mid = left + (right-left)/2;</span><br><span class="line">            if (nums[mid] &gt; target) &#123;</span><br><span class="line">                right = mid - 1;</span><br><span class="line">            &#125;</span><br><span class="line">            if (nums[mid] &lt; target) &#123;</span><br><span class="line">                left = mid + 1;</span><br><span class="line">            &#125;</span><br><span class="line">            if(nums[mid] == target) &#123;</span><br><span class="line">                return mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return -1;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>java代码</tag>
       </tags>
   </entry>
 </search>
