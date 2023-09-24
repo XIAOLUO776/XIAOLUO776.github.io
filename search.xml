@@ -235,4 +235,18 @@ head=temp;
         <tag>c知识点</tag>
       </tags>
   </entry>
+  <entry>
+    <title>排序算法：简单选择，插入，冒泡</title>
+    <url>/2023/202309/20230924/1/</url>
+    <content><![CDATA[<h1 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h1><p>void SelectSort(int arr[], int size)<br>{<br>    int i, j;<br>    for (i &#x3D; 0; i &lt; size-1; i++)<br>    {<br>        int index &#x3D; i;<br>        for(j &#x3D; i+1; j &lt; size; j++)<br>        {<br>            if(arr[index] &gt; arr[j])<br>            {<br>                index &#x3D; j;<br>            }<br>        }<br>        int temp &#x3D; arr[i];<br>        arr[i] &#x3D; arr[index];    <br>        arr[index] &#x3D; temp;<br>    }<br>}</p>
+<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><p>void InsertSort(int arr[], int size)<br>{<br>    int i, j;<br>    for(i &#x3D; 1; i &lt; size; i++)<br>    {<br>        int temp &#x3D; arr[i]; <br>        j&#x3D;i-1;<br>        while (j &gt;&#x3D; 0 &amp;&amp; arr[j] &gt; temp)<br>        {<br>            arr[j+1] &#x3D; arr[j];<br>            j–;<br>        }<br>        arr[j+1] &#x3D; temp;<br>    }<br>}</p>
+<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p>void bubbleSort(int arr[], int size)<br>{<br>    for(int i &#x3D; 0; i &lt; size-1; i++)<br>    {<br>        bool off &#x3D; false;<br>        for(int j &#x3D; 0; j &lt; size-1-i; j++)<br>        {<br>            if(arr[j] &gt; arr[j+1])<br>            {<br>                int temp &#x3D; arr[j];<br>                arr[j] &#x3D; arr[j+1];<br>                arr[j+1] &#x3D; temp;<br>                off &#x3D; true;<br>             }<br>        }<br>        printf(“第%d次执行\n”,i+1);<br>        printArr(arr, 8);<br>        if(!off)<br>         {<br>             return;<br>        }<br>    }<br>}</p>
+]]></content>
+      <categories>
+        <category>排序算法</category>
+      </categories>
+      <tags>
+        <tag>c代码</tag>
+      </tags>
+  </entry>
 </search>
