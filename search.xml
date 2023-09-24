@@ -250,13 +250,27 @@ head=temp;
       </tags>
   </entry>
   <entry>
-    <title>二分发</title>
+    <title>数组算法：二分法</title>
     <url>/2023/202309/20230924/2/</url>
     <content><![CDATA[<h1 id="java实现"><a href="#java实现" class="headerlink" title="java实现"></a>java实现</h1><p>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
 <h6 id="right-nums-length；"><a href="#right-nums-length；" class="headerlink" title="right &#x3D; nums.length；"></a>right &#x3D; nums.length；</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int search(int[] nums, int target) &#123;</span><br><span class="line">        int left = 0, right = nums.length;</span><br><span class="line">        while (left &lt; right) &#123;</span><br><span class="line">            int mid = left + ((right-left) &gt;&gt; 1);</span><br><span class="line">            if (nums[mid] == target) &#123;</span><br><span class="line">                return mid;</span><br><span class="line">            &#125; else if (nums[mid] &gt; target) &#123;</span><br><span class="line">                right = mid;</span><br><span class="line">            &#125; else if (nums[mid] &lt; target) &#123;</span><br><span class="line">                left = mid + 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return -1;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h6 id="right-nums-length-1；"><a href="#right-nums-length-1；" class="headerlink" title="right &#x3D; nums.length - 1；"></a>right &#x3D; nums.length - 1；</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int search(int[] nums, int target) &#123;</span><br><span class="line">        int left = 0;</span><br><span class="line">        int right = nums.length - 1;</span><br><span class="line">        while (left &lt;= right) &#123;</span><br><span class="line">            int mid = left + (right-left)/2;</span><br><span class="line">            if (nums[mid] &gt; target) &#123;</span><br><span class="line">                right = mid - 1;</span><br><span class="line">            &#125;</span><br><span class="line">            if (nums[mid] &lt; target) &#123;</span><br><span class="line">                left = mid + 1;</span><br><span class="line">            &#125;</span><br><span class="line">            if(nums[mid] == target) &#123;</span><br><span class="line">                return mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return -1;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>java代码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组算法：双指针</title>
+    <url>/2023/202309/20230924/3/</url>
+    <content><![CDATA[<p>给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。</p>
+<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
+<h1 id="Java实现"><a href="#Java实现" class="headerlink" title="Java实现"></a>Java实现</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int removeElement(int[] nums, int val) &#123;</span><br><span class="line">        int slowIndex = 0;</span><br><span class="line">        for (int fastIndex=0; fastIndex &lt; nums.length; fastIndex++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(nums[fastIndex] != val) &#123;</span><br><span class="line">                nums[slowIndex++] = nums[fastIndex];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return slowIndex;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>算法</category>
       </categories>
